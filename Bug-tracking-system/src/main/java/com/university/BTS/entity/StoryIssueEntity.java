@@ -7,24 +7,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="ISSUES")
+@Entity(name="ISSUES")
+@Table
 @Where(clause = " TYPE = 2")
 public class StoryIssueEntity extends IssuesBase
 {
-	
-	@Column(name="TYPE")
 	private Integer issueType = IssueTypeEnum.Story.getValue();
-
-	@Column(name="STATUS")
 	private Integer status;
-
-	@Column(name="POINT")
 	private Integer point;
-	
-	@Column(name="ASSIGNEDWEEK")
-	private Integer assignedWeek; 
-	
+	private Integer assignedWeek;
+
 	public Integer getPoint() {
 		return point;
 	}

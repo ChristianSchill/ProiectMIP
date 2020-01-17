@@ -18,8 +18,8 @@ public class DeveloperService{
   }
 
   public List<DeveloperEntity> getDevelopers(){ return developerDao.findAll(); }
-  public DeveloperEntity getById(Integer id) { return developerDao.findOne(id); }
+  public DeveloperEntity getById(Integer id) { return developerDao.getOne(id); }
   public DeveloperEntity update(DeveloperEntity developer) { return developerDao.save(developer); }
-  public void delete(Integer developerId) { developerDao.delete(developerId); }
+  public void delete(Integer developerId) { developerDao.delete(developerDao.getOne(developerId)); }
   public Long getDeveloperCount() { return developerDao.count(); }
 }

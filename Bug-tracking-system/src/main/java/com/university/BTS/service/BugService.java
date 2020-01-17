@@ -24,7 +24,7 @@ public class BugService {
 	}
 	
 	public BugIssueEntity getById(Integer id) {
-		return bugDao.findOne(id);
+		return bugDao.getOne(id);
 	}
 
 	public BugIssueEntity add(BugIssueEntity bug) {
@@ -49,6 +49,6 @@ public class BugService {
 	}
 
 	public BugIssueEntity getBug(Integer bugId) {
-		return bugDao.findOne(bugId);
+		return bugDao.getOne(bugId);
 	}
 }

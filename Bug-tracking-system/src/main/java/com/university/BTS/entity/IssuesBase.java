@@ -1,23 +1,15 @@
 package com.university.BTS.entity;
 
-import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
 import java.util.Date;
 
 @MappedSuperclass
 public class IssuesBase extends BaseEntity {
-		
-	@Column(name="TITLE")
-	private String title;
 
-	@Column(name="DESCRIPTION")
+	private String title;
 	private String description;
-	
-	@Column(name="CREATIONDATE")
 	private Date creationDate;
-	
-	@Column(name="DEVELOPERId")
 	private Integer developerId;
 	
 	@Transient

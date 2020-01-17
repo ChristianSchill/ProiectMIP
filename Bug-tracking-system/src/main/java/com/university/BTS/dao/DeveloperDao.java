@@ -6,5 +6,4 @@ import com.university.BTS.entity.DeveloperEntity;
 
 @Repository
 public interface DeveloperDao extends JpaRepository<DeveloperEntity, Integer> {
-
 }

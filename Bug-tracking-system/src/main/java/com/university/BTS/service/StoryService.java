@@ -27,7 +27,7 @@ public class StoryService {
 	}
 	
 	public StoryIssueEntity getById(Integer id) {
-		return storyDao.findOne(id);
+		return storyDao.getOne(id);
 	}
 
 	public StoryIssueEntity add(StoryIssueEntity story) {
@@ -40,7 +40,7 @@ public class StoryService {
 	}
 
 	public void delete(Integer developerId) {
-		storyDao.delete(developerId);;
+		storyDao.delete(developerId);
 	}
 	
 	public List<Integer> getEstimatedPointList() {
@@ -56,7 +56,7 @@ public class StoryService {
 	}
 
 	public StoryIssueEntity getStory(Integer storyId) {
-		return storyDao.findOne(storyId);
+		return storyDao.getOne(storyId);
 	}
 	
 	public Map<Integer, StoryIssueEntity> getEstimatedStories() {
